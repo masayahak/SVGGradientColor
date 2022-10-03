@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.txtFile = new System.Windows.Forms.TextBox();
             this.cbOutSize = new System.Windows.Forms.ComboBox();
-            this.cbグラデーション方向 = new System.Windows.Forms.ComboBox();
-            this.btn保存 = new System.Windows.Forms.Button();
+            this.cbDirection = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.btnReload = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.pbBackColor = new System.Windows.Forms.PictureBox();
-            this.btn色交換 = new System.Windows.Forms.Button();
+            this.btnSwitchColor = new System.Windows.Forms.Button();
             this.pbColor2 = new System.Windows.Forms.PictureBox();
             this.pbColor1 = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -92,32 +92,32 @@
             this.cbOutSize.TabIndex = 7;
             this.cbOutSize.SelectedIndexChanged += new System.EventHandler(this.cbOutSize_SelectedIndexChanged);
             // 
-            // cbグラデーション方向
+            // cbDirection
             // 
-            this.cbグラデーション方向.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbグラデーション方向.FormattingEnabled = true;
-            this.cbグラデーション方向.Items.AddRange(new object[] {
-            "Left Up to Right Down",
-            "Right Up to Left Down",
-            "Up to Down",
+            this.cbDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDirection.FormattingEnabled = true;
+            this.cbDirection.Items.AddRange(new object[] {
+            "Left Top to Right Bottom",
+            "Right Top to Left Bottom",
+            "Top to Bottom",
             "Left to Right"});
-            this.cbグラデーション方向.Location = new System.Drawing.Point(528, 138);
-            this.cbグラデーション方向.Margin = new System.Windows.Forms.Padding(2);
-            this.cbグラデーション方向.Name = "cbグラデーション方向";
-            this.cbグラデーション方向.Size = new System.Drawing.Size(297, 32);
-            this.cbグラデーション方向.TabIndex = 8;
-            this.cbグラデーション方向.SelectedIndexChanged += new System.EventHandler(this.cbグラデーション方向_SelectedIndexChanged);
+            this.cbDirection.Location = new System.Drawing.Point(528, 138);
+            this.cbDirection.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDirection.Name = "cbDirection";
+            this.cbDirection.Size = new System.Drawing.Size(297, 32);
+            this.cbDirection.TabIndex = 8;
+            this.cbDirection.SelectedIndexChanged += new System.EventHandler(this.cbDirection_SelectedIndexChanged);
             // 
-            // btn保存
+            // btnSave
             // 
-            this.btn保存.Location = new System.Drawing.Point(689, 568);
-            this.btn保存.Margin = new System.Windows.Forms.Padding(2);
-            this.btn保存.Name = "btn保存";
-            this.btn保存.Size = new System.Drawing.Size(136, 32);
-            this.btn保存.TabIndex = 9;
-            this.btn保存.Text = "Save as";
-            this.btn保存.UseVisualStyleBackColor = true;
-            this.btn保存.Click += new System.EventHandler(this.btn保存_Click);
+            this.btnSave.Location = new System.Drawing.Point(689, 568);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(136, 32);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save as";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
@@ -206,7 +206,7 @@
             this.btnReload.Size = new System.Drawing.Size(36, 36);
             this.btnReload.TabIndex = 20;
             this.btnReload.UseVisualStyleBackColor = false;
-            this.btnReload.Click += new System.EventHandler(this.btnロード_Click);
+            this.btnReload.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnOpen
             // 
@@ -233,22 +233,22 @@
             this.pbBackColor.Size = new System.Drawing.Size(77, 78);
             this.pbBackColor.TabIndex = 17;
             this.pbBackColor.TabStop = false;
-            this.pbBackColor.DoubleClick += new System.EventHandler(this.pbBackColor_Click);
+            this.pbBackColor.DoubleClick += new System.EventHandler(this.pbBackColor_DoubleClick);
             // 
-            // btn色交換
+            // btnSwitchColor
             // 
-            this.btn色交換.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
-            this.btn色交換.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn色交換.FlatAppearance.BorderSize = 0;
-            this.btn色交換.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn色交換.Image = ((System.Drawing.Image)(resources.GetObject("btn色交換.Image")));
-            this.btn色交換.Location = new System.Drawing.Point(653, 289);
-            this.btn色交換.Margin = new System.Windows.Forms.Padding(2);
-            this.btn色交換.Name = "btn色交換";
-            this.btn色交換.Size = new System.Drawing.Size(36, 36);
-            this.btn色交換.TabIndex = 10;
-            this.btn色交換.UseVisualStyleBackColor = false;
-            this.btn色交換.Click += new System.EventHandler(this.btn色交換_Click);
+            this.btnSwitchColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.btnSwitchColor.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSwitchColor.FlatAppearance.BorderSize = 0;
+            this.btnSwitchColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSwitchColor.Image = ((System.Drawing.Image)(resources.GetObject("btnSwitchColor.Image")));
+            this.btnSwitchColor.Location = new System.Drawing.Point(653, 289);
+            this.btnSwitchColor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSwitchColor.Name = "btnSwitchColor";
+            this.btnSwitchColor.Size = new System.Drawing.Size(36, 36);
+            this.btnSwitchColor.TabIndex = 10;
+            this.btnSwitchColor.UseVisualStyleBackColor = false;
+            this.btnSwitchColor.Click += new System.EventHandler(this.btnSwitchColor_Click);
             // 
             // pbColor2
             // 
@@ -260,7 +260,7 @@
             this.pbColor2.Size = new System.Drawing.Size(77, 78);
             this.pbColor2.TabIndex = 6;
             this.pbColor2.TabStop = false;
-            this.pbColor2.DoubleClick += new System.EventHandler(this.pbColor2_Click);
+            this.pbColor2.DoubleClick += new System.EventHandler(this.pbColor2_DoubleClick);
             // 
             // pbColor1
             // 
@@ -272,7 +272,7 @@
             this.pbColor1.Size = new System.Drawing.Size(77, 78);
             this.pbColor1.TabIndex = 4;
             this.pbColor1.TabStop = false;
-            this.pbColor1.DoubleClick += new System.EventHandler(this.pbColor1_Click);
+            this.pbColor1.DoubleClick += new System.EventHandler(this.pbColor1_DoubleClick);
             // 
             // panelImageBack
             // 
@@ -335,9 +335,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn色交換);
-            this.Controls.Add(this.btn保存);
-            this.Controls.Add(this.cbグラデーション方向);
+            this.Controls.Add(this.btnSwitchColor);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.cbDirection);
             this.Controls.Add(this.cbOutSize);
             this.Controls.Add(this.pbColor2);
             this.Controls.Add(this.pbColor1);
@@ -370,9 +370,9 @@
         private System.Windows.Forms.PictureBox pbColor1;
         private System.Windows.Forms.PictureBox pbColor2;
         private System.Windows.Forms.ComboBox cbOutSize;
-        private System.Windows.Forms.ComboBox cbグラデーション方向;
-        private System.Windows.Forms.Button btn保存;
-        private System.Windows.Forms.Button btn色交換;
+        private System.Windows.Forms.ComboBox cbDirection;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnSwitchColor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
