@@ -283,12 +283,14 @@ namespace SVGGradientColor
                         new XAttribute("y1", direct.y1),
                         new XAttribute("x2", direct.x2),
                         new XAttribute("y2", direct.y2),
-                        // カラー1⃣
+
+                        // color 1
                         new XElement("{http://www.w3.org/2000/svg}stop",
                                 new XAttribute("offset", "0%"),
                                 new XAttribute("style", "stop-color:rgb(" + rgb1 + ");stop-opacity:1")
                         ),
-                        // カラー2⃣
+
+                        // color 2
                         new XElement("{http://www.w3.org/2000/svg}stop",
                                 new XAttribute("offset", "100%"),
                                 new XAttribute("style", "stop-color:rgb(" + rgb2 + ");stop-opacity:1")
@@ -318,8 +320,7 @@ namespace SVGGradientColor
             int x2 = 0;
             int y2 = 0;
 
-            var 方向 = this.cbDirection.SelectedItem;
-            switch (方向)
+            switch (cbDirection.SelectedItem)
             {
                 case "Left Top to Right Bottom":
                     {
