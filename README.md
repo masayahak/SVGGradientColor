@@ -7,8 +7,8 @@
 You can also download binary.
 [SVGGradientColor.zip](https://github.com/masayahak/SVGGradientColor/files/9699581/SVGGradientColor.zip)
 
+See Images.
 
-Images
 ![image1](https://user-images.githubusercontent.com/96961556/193639972-dfc4a511-af75-429b-817d-e0811c7429e9.png)
 
 ![image2](https://user-images.githubusercontent.com/96961556/193639981-2aa545aa-c69b-4aae-957f-8433657161d5.png)
