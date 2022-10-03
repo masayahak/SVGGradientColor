@@ -63,9 +63,9 @@ namespace SVGGradientColor.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap フォルダ {
+        internal static System.Drawing.Bitmap _switch {
             get {
-                object obj = ResourceManager.GetObject("フォルダ", resourceCulture);
+                object obj = ResourceManager.GetObject("switch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SVGGradientColor.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap リロード {
+        internal static System.Drawing.Bitmap open {
             get {
-                object obj = ResourceManager.GetObject("リロード", resourceCulture);
+                object obj = ResourceManager.GetObject("open", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace SVGGradientColor.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap 交換 {
+        internal static System.Drawing.Bitmap reload {
             get {
-                object obj = ResourceManager.GetObject("交換", resourceCulture);
+                object obj = ResourceManager.GetObject("reload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

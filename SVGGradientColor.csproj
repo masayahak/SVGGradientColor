@@ -105,9 +105,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icons\フォルダ.PNG" />
-    <Content Include="Icons\リロード.PNG" />
-    <Content Include="Icons\交換.PNG" />
+    <Content Include="Icons\open.PNG" />
+    <Content Include="Icons\reload.PNG" />
+    <Content Include="Icons\switch.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

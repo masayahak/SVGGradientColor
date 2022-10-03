@@ -41,23 +41,23 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.label6 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.colorDialogBackColor = new System.Windows.Forms.ColorDialog();
+            this.panelImageBack = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblStroke = new System.Windows.Forms.Label();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.pbBackColor = new System.Windows.Forms.PictureBox();
             this.btnSwitchColor = new System.Windows.Forms.Button();
             this.pbColor2 = new System.Windows.Forms.PictureBox();
             this.pbColor1 = new System.Windows.Forms.PictureBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.colorDialogBackColor = new System.Windows.Forms.ColorDialog();
-            this.panelImageBack = new System.Windows.Forms.Panel();
             this.pbTestImage = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblStroke = new System.Windows.Forms.Label();
+            this.panelImageBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor1)).BeginInit();
-            this.panelImageBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,13 +193,46 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Back Color";
             // 
+            // panelImageBack
+            // 
+            this.panelImageBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelImageBack.Controls.Add(this.pbTestImage);
+            this.panelImageBack.Location = new System.Drawing.Point(7, 90);
+            this.panelImageBack.Name = "panelImageBack";
+            this.panelImageBack.Size = new System.Drawing.Size(512, 512);
+            this.panelImageBack.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(631, 574);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 20);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "PX";
+            // 
+            // lblStroke
+            // 
+            this.lblStroke.AutoSize = true;
+            this.lblStroke.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStroke.ForeColor = System.Drawing.Color.Violet;
+            this.lblStroke.Location = new System.Drawing.Point(50, 63);
+            this.lblStroke.Name = "lblStroke";
+            this.lblStroke.Size = new System.Drawing.Size(714, 24);
+            this.lblStroke.TabIndex = 24;
+            this.lblStroke.Text = "This SVG File contains \"stroke\" attributes in \"SVG\" tag.  Sorry, I can\'t draw gra" +
+    "diental well.";
+            this.lblStroke.Visible = false;
+            // 
             // btnReload
             // 
             this.btnReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
             this.btnReload.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnReload.FlatAppearance.BorderSize = 0;
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.Image = global::SVGGradientColor.Properties.Resources.reload;
             this.btnReload.Location = new System.Drawing.Point(789, 24);
             this.btnReload.Margin = new System.Windows.Forms.Padding(2);
             this.btnReload.Name = "btnReload";
@@ -214,7 +247,7 @@
             this.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnOpen.FlatAppearance.BorderSize = 0;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
+            this.btnOpen.Image = global::SVGGradientColor.Properties.Resources.open;
             this.btnOpen.Location = new System.Drawing.Point(7, 24);
             this.btnOpen.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpen.Name = "btnOpen";
@@ -241,7 +274,7 @@
             this.btnSwitchColor.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSwitchColor.FlatAppearance.BorderSize = 0;
             this.btnSwitchColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSwitchColor.Image = ((System.Drawing.Image)(resources.GetObject("btnSwitchColor.Image")));
+            this.btnSwitchColor.Image = global::SVGGradientColor.Properties.Resources._switch;
             this.btnSwitchColor.Location = new System.Drawing.Point(653, 289);
             this.btnSwitchColor.Margin = new System.Windows.Forms.Padding(2);
             this.btnSwitchColor.Name = "btnSwitchColor";
@@ -274,15 +307,6 @@
             this.pbColor1.TabStop = false;
             this.pbColor1.DoubleClick += new System.EventHandler(this.pbColor1_DoubleClick);
             // 
-            // panelImageBack
-            // 
-            this.panelImageBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelImageBack.Controls.Add(this.pbTestImage);
-            this.panelImageBack.Location = new System.Drawing.Point(7, 90);
-            this.panelImageBack.Name = "panelImageBack";
-            this.panelImageBack.Size = new System.Drawing.Size(512, 512);
-            this.panelImageBack.TabIndex = 22;
-            // 
             // pbTestImage
             // 
             this.pbTestImage.BackColor = System.Drawing.Color.Gray;
@@ -293,30 +317,6 @@
             this.pbTestImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbTestImage.TabIndex = 3;
             this.pbTestImage.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(631, 574);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 20);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "PX";
-            // 
-            // lblStroke
-            // 
-            this.lblStroke.AutoSize = true;
-            this.lblStroke.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblStroke.ForeColor = System.Drawing.Color.Violet;
-            this.lblStroke.Location = new System.Drawing.Point(50, 63);
-            this.lblStroke.Name = "lblStroke";
-            this.lblStroke.Size = new System.Drawing.Size(714, 24);
-            this.lblStroke.TabIndex = 24;
-            this.lblStroke.Text = "This SVG File contains \"stroke\" attributes in \"SVG\" tag.  Sorry, I can\'t draw gra" +
-    "diental well.";
-            this.lblStroke.Visible = false;
             // 
             // FormMain
             // 
@@ -353,11 +353,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SVG Gradient Color";
             this.Load += new System.EventHandler(this.Form_Load);
+            this.panelImageBack.ResumeLayout(false);
+            this.panelImageBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor1)).EndInit();
-            this.panelImageBack.ResumeLayout(false);
-            this.panelImageBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
