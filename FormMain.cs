@@ -20,7 +20,7 @@ namespace SVGGradientColor
         }
 
 
-        private void FormIconColor_Load(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
             cbグラデーション方向.SelectedIndex = 0;  // 左上 → 右下
             cbOutSize.SelectedIndex = 3;             // 64px

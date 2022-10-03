@@ -337,7 +337,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SVG Gradient Color";
-            this.Load += new System.EventHandler(this.FormIconColor_Load);
+            this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBackColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor1)).EndInit();
