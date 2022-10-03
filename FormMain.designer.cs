@@ -53,6 +53,7 @@
             this.panelImageBack = new System.Windows.Forms.Panel();
             this.pbTestImage = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblStroke = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor1)).BeginInit();
@@ -84,7 +85,7 @@
             "128",
             "256",
             "512"});
-            this.cbOutSize.Location = new System.Drawing.Point(531, 547);
+            this.cbOutSize.Location = new System.Drawing.Point(531, 568);
             this.cbOutSize.Margin = new System.Windows.Forms.Padding(2);
             this.cbOutSize.Name = "cbOutSize";
             this.cbOutSize.Size = new System.Drawing.Size(88, 32);
@@ -100,7 +101,7 @@
             "Right Up to Left Down",
             "Up to Down",
             "Left to Right"});
-            this.cbグラデーション方向.Location = new System.Drawing.Point(528, 117);
+            this.cbグラデーション方向.Location = new System.Drawing.Point(528, 138);
             this.cbグラデーション方向.Margin = new System.Windows.Forms.Padding(2);
             this.cbグラデーション方向.Name = "cbグラデーション方向";
             this.cbグラデーション方向.Size = new System.Drawing.Size(297, 32);
@@ -109,7 +110,7 @@
             // 
             // btn保存
             // 
-            this.btn保存.Location = new System.Drawing.Point(689, 547);
+            this.btn保存.Location = new System.Drawing.Point(689, 568);
             this.btn保存.Margin = new System.Windows.Forms.Padding(2);
             this.btn保存.Name = "btn保存";
             this.btn保存.Size = new System.Drawing.Size(136, 32);
@@ -123,7 +124,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(524, 95);
+            this.label1.Location = new System.Drawing.Point(524, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 11;
@@ -134,7 +135,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(547, 222);
+            this.label2.Location = new System.Drawing.Point(547, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 12;
@@ -145,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(710, 222);
+            this.label3.Location = new System.Drawing.Point(710, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 13;
@@ -156,7 +157,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(530, 525);
+            this.label4.Location = new System.Drawing.Point(530, 546);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 20);
             this.label4.TabIndex = 14;
@@ -186,7 +187,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(630, 364);
+            this.label6.Location = new System.Drawing.Point(630, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 18;
@@ -226,7 +227,7 @@
             // 
             this.pbBackColor.BackColor = System.Drawing.Color.Gray;
             this.pbBackColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbBackColor.Location = new System.Drawing.Point(635, 386);
+            this.pbBackColor.Location = new System.Drawing.Point(635, 407);
             this.pbBackColor.Margin = new System.Windows.Forms.Padding(2);
             this.pbBackColor.Name = "pbBackColor";
             this.pbBackColor.Size = new System.Drawing.Size(77, 78);
@@ -241,7 +242,7 @@
             this.btn色交換.FlatAppearance.BorderSize = 0;
             this.btn色交換.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn色交換.Image = ((System.Drawing.Image)(resources.GetObject("btn色交換.Image")));
-            this.btn色交換.Location = new System.Drawing.Point(653, 268);
+            this.btn色交換.Location = new System.Drawing.Point(653, 289);
             this.btn色交換.Margin = new System.Windows.Forms.Padding(2);
             this.btn色交換.Name = "btn色交換";
             this.btn色交換.Size = new System.Drawing.Size(36, 36);
@@ -253,7 +254,7 @@
             // 
             this.pbColor2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(218)))), ((int)(((byte)(198)))));
             this.pbColor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbColor2.Location = new System.Drawing.Point(714, 244);
+            this.pbColor2.Location = new System.Drawing.Point(714, 265);
             this.pbColor2.Margin = new System.Windows.Forms.Padding(2);
             this.pbColor2.Name = "pbColor2";
             this.pbColor2.Size = new System.Drawing.Size(77, 78);
@@ -265,7 +266,7 @@
             // 
             this.pbColor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(0)))), ((int)(((byte)(179)))));
             this.pbColor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbColor1.Location = new System.Drawing.Point(551, 244);
+            this.pbColor1.Location = new System.Drawing.Point(551, 265);
             this.pbColor1.Margin = new System.Windows.Forms.Padding(2);
             this.pbColor1.Name = "pbColor1";
             this.pbColor1.Size = new System.Drawing.Size(77, 78);
@@ -277,7 +278,7 @@
             // 
             this.panelImageBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelImageBack.Controls.Add(this.pbTestImage);
-            this.panelImageBack.Location = new System.Drawing.Point(7, 69);
+            this.panelImageBack.Location = new System.Drawing.Point(7, 90);
             this.panelImageBack.Name = "panelImageBack";
             this.panelImageBack.Size = new System.Drawing.Size(512, 512);
             this.panelImageBack.TabIndex = 22;
@@ -298,18 +299,32 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(631, 553);
+            this.label7.Location = new System.Drawing.Point(631, 574);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 20);
             this.label7.TabIndex = 23;
             this.label7.Text = "PX";
+            // 
+            // lblStroke
+            // 
+            this.lblStroke.AutoSize = true;
+            this.lblStroke.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStroke.ForeColor = System.Drawing.Color.Violet;
+            this.lblStroke.Location = new System.Drawing.Point(50, 63);
+            this.lblStroke.Name = "lblStroke";
+            this.lblStroke.Size = new System.Drawing.Size(714, 24);
+            this.lblStroke.TabIndex = 24;
+            this.lblStroke.Text = "This SVG File contains \"stroke\" attributes in \"SVG\" tag.  Sorry, I can\'t draw gra" +
+    "diental well.";
+            this.lblStroke.Visible = false;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(833, 586);
+            this.ClientSize = new System.Drawing.Size(833, 607);
+            this.Controls.Add(this.lblStroke);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnOpen);
@@ -375,5 +390,6 @@
         private System.Windows.Forms.Panel panelImageBack;
         private System.Windows.Forms.PictureBox pbTestImage;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblStroke;
     }
 }

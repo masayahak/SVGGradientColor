@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
 using Svg;
 
@@ -79,7 +81,7 @@ namespace SVGGradientColor
 
         private void btnロード_Click(object sender, EventArgs e)
         {
-            LoadSVG();
+            ShowSVG();
         }
 
         private void LoadSVG()
@@ -88,8 +90,25 @@ namespace SVGGradientColor
             var filePath = txtFile.Text;
             xDoc = XDocument.Load(filePath);
 
+            // stroke チェック
+            lblStroke.Visible = false;
+            if (isStrokeAttrExist())
+            {
+                lblStroke.Visible = true;
+            }
+
             // アイコン描画
             CreateGradiantSVG();
+        }
+
+        private bool isStrokeAttrExist()
+        {
+            if (xDoc.Root.Attributes("stroke").Count() > 0)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         // ----------------------------------------------------------------
@@ -187,12 +206,39 @@ namespace SVGGradientColor
         {
             XAttribute xStyle = xDoc.Root.Attribute("style");
 
-            // 新しいサイズ
-            // style="width: 256px; height: 256px; opacity: 1;" 
-            string newSize = cbOutSize.SelectedItem.ToString() + "px";
-            string newStyle = string.Format("width: {0}; height: {0}; opacity: 1;", newSize);
+            if (xStyle != null) 
+            {
+                // 新しいサイズ
+                // style="width: 256px; height: 256px; opacity: 1;" 
+                string newSize = cbOutSize.SelectedItem.ToString() + "px";
+                string newStyle = string.Format("width: {0}; height: {0}; opacity: 1;", newSize);
 
-            xStyle.Value = newStyle;
+                xStyle.Value = newStyle;
+            }
+            else
+            {
+                XAttribute xWidth = xDoc.Root.Attribute("width");
+                if (xWidth != null)
+                {
+                    xWidth.Value = cbOutSize.SelectedItem.ToString();
+                }
+                else
+                {
+                    xDoc.Root.Add(new XAttribute("width", cbOutSize.SelectedItem.ToString()));
+                }
+
+                XAttribute xHeight = xDoc.Root.Attribute("height");
+                if (xHeight != null)
+                {
+                    xHeight.Value = cbOutSize.SelectedItem.ToString();
+                }
+                else
+                {
+                    xDoc.Root.Add(new XAttribute("height", cbOutSize.SelectedItem.ToString()));
+                }
+
+            }
+
         }
 
 
@@ -335,37 +381,38 @@ namespace SVGGradientColor
         }
 
         // ----------------------------------------------------------------
-        // エレメント全体から<svg><g><path>を探しfill部分を書き換える
+        // エレメント全体からfill部分を書き換える
         // ----------------------------------------------------------------
         private void ReplaceFill()
         {
-            // <svg><g>
-            IEnumerable<XElement> allElements = xDoc.Root.Elements()
-                                .Where(it => it.Name == "{http://www.w3.org/2000/svg}g")
-                                ;
-
-            foreach (var element in allElements)
+            // 全てのノードで
+            foreach (XObject obj in xDoc.Root.DescendantNodes())
             {
+                XElement el = obj as XElement;
 
-                // <svg><g><path>
-                IEnumerable<XElement> xPath = element.Elements()
-                                .Where(it => it.Name == "{http://www.w3.org/2000/svg}path")
-                                ;
-
-                foreach (var path in xPath)
+                if (el != null)
                 {
-                    IEnumerable<XAttribute> allAttriibutes = path.Attributes();
-                    foreach(XAttribute attr in allAttriibutes)
+                    // 親が linearGradient 以外 かつ 子要素を持たなければ
+                    if ((!el.Parent.Name.ToString().Contains("linearGradient")) && (!el.HasElements))
                     {
-                        if (attr.Value.StartsWith("fill:"))
-                        {
-                            attr.Value = "fill: url(#grad1);";
-                        }
-
+                        ReplaceAttribute(el);
                     }
                 }
+
             }
         }
+
+        // path内を置き換える
+        private void ReplaceAttribute(XElement Element)
+        {
+            // styleとfill属性は削除
+            Element.Attributes("style").Remove();
+            Element.Attributes("fill").Remove();
+
+            // styleを改めて追加
+            Element.Add(new XAttribute("style", "fill: url(#grad1);"));
+        }
+
 
 
         // ----------------------------------------------------------------
@@ -388,7 +435,7 @@ namespace SVGGradientColor
             {
                 try
                 {
-                    System.IO.File.Delete(tmpFilePath);
+                    File.Delete(tmpFilePath);
                 }
                 catch { }
             }
@@ -408,7 +455,7 @@ namespace SVGGradientColor
             saveFileDialog.FileName = fileName + "_" + size + "px.PNG";
 
             // フィルターの設定
-            saveFileDialog.Filter = "PNG|*.png|JPEG|*.jpeg|GIF|*.gif";
+            saveFileDialog.Filter = "PNG|*.png|JPEG|*.jpeg|GIF|*.gif|SVG|*.svg";
             saveFileDialog.FilterIndex = 0;
 
             // ファイル保存ダイアログを表示
@@ -430,6 +477,9 @@ namespace SVGGradientColor
                     break;
                 case ".GIF":
                     pbTestImage.Image.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Gif);
+                    break;
+                case ".SVG":
+                    xDoc.Save(saveFileDialog.FileName);
                     break;
             }
         }
