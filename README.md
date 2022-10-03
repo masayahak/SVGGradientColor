@@ -2,7 +2,7 @@
 
 1. You can create PNG / JPEG / GIF files from SVG files.
 2. All SVG fill color convert to gradient colors you choosed.
-3. Gradient directions are four ways.
+3. You can select a gradient direction from four ways.
 
 You can also download binary.
 [SVGGradientColor.zip](https://github.com/masayahak/SVGGradientColor/files/9699581/SVGGradientColor.zip)
