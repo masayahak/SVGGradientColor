@@ -1,14 +1,18 @@
 # SVGGradientColor
 
 1. You can convert a SVG icon to gradient colored which you choosed.
-![i1](https://user-images.githubusercontent.com/96961556/193669052-e085c631-98f4-4402-b4f3-67f0df29c1b1.png)
-![i2](https://user-images.githubusercontent.com/96961556/193669060-ef549616-7fbc-4072-8ccb-95757526f58e.png)
 
- (But if the SVG has "stroke" attribute in "svg" tag, I can't drwa gradiental well. Sorry.) 
-![i3](https://user-images.githubusercontent.com/96961556/193669067-28313345-cdf4-4a2f-924a-708792daf8bf.png)
+<img src="https://user-images.githubusercontent.com/96961556/193672885-ddeb769f-57bc-49fd-850a-bcc1ebcf2ec7.png" width="500">
+<img src="https://user-images.githubusercontent.com/96961556/193672906-47f7762e-9a6f-495a-911f-268e06543036.png" width="500">
 
-2. You can create PNG / JPEG / GIF or as SVG file from SVG files.
-![i4](https://user-images.githubusercontent.com/96961556/193669073-7d4e71d7-ba89-4137-a056-3d1e575037d3.png)
+ (But if the SVG has "stroke" attributes in "svg" tag, I can't drwa gradiental well. Sorry.) 
+ 
+<img src="https://user-images.githubusercontent.com/96961556/193673010-0917c1b1-c164-4c2e-9a56-1782fe705b47.png" width="500">
+
+
+2. You can save as PNG / JPEG / GIF or SVG file from SVG file.
+
+<img src="https://user-images.githubusercontent.com/96961556/193672977-6c936e3f-81ac-405d-9182-61ce685fc297.png" width="500">
 
 You can also download binary.
 [SVGGradientColor.zip](https://github.com/masayahak/SVGGradientColor/files/9700578/SVGGradientColor.zip)
